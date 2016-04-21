@@ -9,6 +9,7 @@
     <version>1.8</version>
     <properties>
         <hawtjni-version>1.9</hawtjni-version>
+        <leveldb-api-version>0.7</leveldb-api-version>
     </properties>
     <packaging>bundle</packaging>
     <build>
@@ -53,6 +54,37 @@
             <version>${hawtjni-version}</version>
             <scope>provided</scope>
             <classifier>sources</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.iq80.leveldb</groupId>
+            <artifactId>leveldb-api</artifactId>
+            <version>${leveldb-api-version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.iq80.leveldb</groupId>
+            <artifactId>leveldb-api</artifactId>
+            <version>${leveldb-api-version}</version>
+            <scope>provided</scope>
+            <classifier>sources</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.iq80.leveldb</groupId>
+            <artifactId>leveldb</artifactId>
+            <version>${leveldb-api-version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.iq80.leveldb</groupId>
+            <artifactId>leveldb</artifactId>
+            <version>${leveldb-api-version}</version>
+            <scope>provided</scope>
+            <classifier>sources</classifier>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>16.0.1</version>
         </dependency>
     </dependencies>
     <distributionManagement>
