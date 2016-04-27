@@ -15,6 +15,7 @@
         <module>junrar</module>
         <module>commons-vfs</module>
         <module>akka-http-xml</module>
+        <module>json4s</module>
     </modules>
 
 
