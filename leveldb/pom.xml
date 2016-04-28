@@ -17,7 +17,7 @@
                 <configuration>
                     <instructions>
                         <Embed-Dependency>*;scope=provided;inline=true</Embed-Dependency>
-                        <Import-Package>!org.apache.hadoop.*,!org.xerial.snappy.*,*</Import-Package>
+                        <!--<Import-Package>!org.apache.hadoop.*,!org.xerial.snappy.*,*</Import-Package>-->
                         <_exportcontents>*</_exportcontents>
                     </instructions>
                 </configuration>
@@ -25,49 +25,65 @@
         </plugins>
     </build>
     <dependencies>
+        <!--<dependency>-->
+            <!--<groupId>org.iq80.leveldb</groupId>-->
+            <!--<artifactId>leveldb-api</artifactId>-->
+            <!--<version>${project.version}</version>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.iq80.leveldb</groupId>-->
+            <!--<artifactId>leveldb-api</artifactId>-->
+            <!--<version>${project.version}</version>-->
+            <!--<scope>provided</scope>-->
+            <!--<classifier>sources</classifier>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.iq80.leveldb</groupId>
-            <artifactId>leveldb-api</artifactId>
+            <artifactId>leveldb</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.iq80.leveldb</groupId>
-            <artifactId>leveldb-api</artifactId>
-            <version>${project.version}</version>
-            <scope>provided</scope>
-            <classifier>sources</classifier>
         </dependency>
         <dependency>
             <groupId>org.iq80.leveldb</groupId>
             <artifactId>leveldb</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
+            <classifier>sources</classifier>
         </dependency>
         <dependency>
-            <groupId>org.iq80.leveldb</groupId>
-            <artifactId>leveldb</artifactId>
+            <groupId>osgi-repacks</groupId>
+            <artifactId>leveldb-api</artifactId>
             <version>${project.version}</version>
-            <scope>provided</scope>
-            <classifier>sources</classifier>
+            <!--<scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>org.iq80.snappy</groupId>
             <artifactId>snappy</artifactId>
             <version>0.2</version>
-            <scope>provided</scope>
+            <!--<scope>provided</scope>-->
         </dependency>
         <dependency>
-            <groupId>org.iq80.snappy</groupId>
-            <artifactId>snappy</artifactId>
-            <version>0.2</version>
-            <scope>provided</scope>
-            <classifier>sources</classifier>
+            <groupId>org.xerial.snappy</groupId>
+            <artifactId>snappy-java</artifactId>
+            <version>1.0.3</version>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.iq80.snappy</groupId>-->
+            <!--<artifactId>snappy</artifactId>-->
+            <!--<version>0.2</version>-->
+            <!--<scope>provided</scope>-->
+            <!--<classifier>sources</classifier>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>16.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>osgi-repacks</groupId>
+            <artifactId>ext</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
     <distributionManagement>

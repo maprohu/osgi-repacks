@@ -8,6 +8,8 @@
     <artifactId>osgi-repacks</artifactId>
     <packaging>pom</packaging>
     <modules>
+        <module>ext</module>
+        <module>leveldb-api</module>
         <module>leveldb</module>
         <module>leveldbjni</module>
         <module>akka-scalapb-serialization</module>
