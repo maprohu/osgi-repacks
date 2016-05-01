@@ -26,6 +26,57 @@
                     </instructions>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.10</version>
+                <executions>
+                    <execution>
+                        <id>unpack</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.fusesource.leveldbjni</groupId>
+                                    <artifactId>leveldbjni</artifactId>
+                                    <version>${project.version}</version>
+                                    <classifier>sources</classifier>
+
+                                    <overWrite>true</overWrite>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.fusesource.hawtjni</groupId>
+                                    <artifactId>hawtjni-runtime</artifactId>
+                                    <version>${hawtjni-version}</version>
+                                    <classifier>sources</classifier>
+
+                                    <overWrite>true</overWrite>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <configuration>
+                            <classesDirectory>${project.build.directory}/dependency</classesDirectory>
+                            <classifier>sources</classifier>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
     <dependencies>
@@ -36,24 +87,10 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.fusesource.leveldbjni</groupId>
-            <artifactId>leveldbjni</artifactId>
-            <version>${project.version}</version>
-            <scope>provided</scope>
-            <classifier>sources</classifier>
-        </dependency>
-        <dependency>
             <groupId>org.fusesource.hawtjni</groupId>
             <artifactId>hawtjni-runtime</artifactId>
             <version>${hawtjni-version}</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.fusesource.hawtjni</groupId>
-            <artifactId>hawtjni-runtime</artifactId>
-            <version>${hawtjni-version}</version>
-            <scope>provided</scope>
-            <classifier>sources</classifier>
         </dependency>
         <!--<dependency>-->
             <!--<groupId>org.iq80.leveldb</groupId>-->
