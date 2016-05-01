@@ -17,7 +17,7 @@
                 <configuration>
                     <instructions>
                         <Embed-Dependency>*;scope=provided;inline=true</Embed-Dependency>
-                        <!--<Import-Package>!org.apache.hadoop.*,!org.xerial.snappy.*,*</Import-Package>-->
+                        <Import-Package>!sun.*,*</Import-Package>
                         <_exportcontents>*</_exportcontents>
                     </instructions>
                 </configuration>
