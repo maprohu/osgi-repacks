@@ -18,6 +18,7 @@
         <module>commons-vfs</module>
         <module>akka-http-xml</module>
         <module>json4s</module>
+        <module>scalarx</module>
     </modules>
 
 
