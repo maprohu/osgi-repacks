@@ -19,6 +19,8 @@
         <module>akka-http-xml</module>
         <module>json4s</module>
         <module>scalarx</module>
+        <module>ssl-config-akka</module>
+        <module>ssl-config-core</module>
     </modules>
 
 
