@@ -21,6 +21,10 @@
         <module>scalarx</module>
         <module>ssl-config-akka</module>
         <module>ssl-config-core</module>
+        <module>autowire</module>
+        <module>upickle</module>
+        <module>derive</module>
+        <module>jawn-parser</module>
     </modules>
 
 
