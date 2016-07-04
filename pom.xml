@@ -25,6 +25,9 @@
         <module>upickle</module>
         <module>derive</module>
         <module>jawn-parser</module>
+        <module>uncommons-maths</module>
+        <module>akka-contrib</module>
+        <module>snappy</module>
     </modules>
 
 
